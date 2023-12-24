@@ -1,0 +1,31 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.dll
+
+# Distribution / packaging files
+.Python
+build/
+develop/
+eggs/
+bin/
+lib/
+parts/
+sdist/
+wheelhouse/
+install/
+*.egg-info/
+
+# Django specific files
+local_settings.py
+secret_key.py
+db.sqlite3
+
+# Python virtual environment
+venv/
+
+# Testing files
+.pytest_cache/
+.tox/
+*.coverage
