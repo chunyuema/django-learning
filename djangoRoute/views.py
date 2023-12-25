@@ -25,4 +25,8 @@ def user_detail(request, user_id):
     return render(request, "user_detail.html", {"user": user})
 
 
+def test(request, a, b):
+    return HttpResponse(f'a:{a} - b:{b}')
+
+
 
