@@ -21,4 +21,5 @@ from demo1.views import *
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("demo1/", include("demo1.urls")),
+    path("djangoModels/", include("djangoModels.urls"))
 ]
