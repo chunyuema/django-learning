@@ -16,4 +16,13 @@ def user_list(request):
     return render(request, "users.html", {"users": users})
 
 
+def user_detail(request, user_id):
+    print("Getting user information for ", user_id)
+    user = UserModel.objects.get(pk=user_id)
+    print("Finishe getting user information for ", user.name)
+
+    # Passing argument into url
+    return render(request, "user_detail.html", {"user": user})
+
+
 
