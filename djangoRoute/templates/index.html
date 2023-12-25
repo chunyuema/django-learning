@@ -13,8 +13,14 @@
 
     <br>
 
-    {# 反向解析 #}
-    <a href="{% url 'userlist' %}">Method 2: 反向解析 to enter the user list page</a>
+    {# 反向解析 (Not compatible if you have the namespace turned on) #}
+    {# <a href="{% url 'userlist' %}">Method 2: 反向解析 to enter the user list page</a> #}
+
+
+    <br>
+
+    {# 反向解析 with namespace #}
+    <a href="{% url 'djangoRoute:userlist' %}">Method 3: 反向解析(with namespace) to enter the user list page</a>
 
 </body>
 </html>

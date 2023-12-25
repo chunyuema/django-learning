@@ -22,10 +22,10 @@ urlpatterns = [
     path("admin/", admin.site.urls),
 
     # 1. Using children route
-    path("djangoRoute/", include("djangoRoute.urls")),
+    # path("djangoRoute/", include("djangoRoute.urls")),
 
     # 2. Using children route with namespace
-    # path("djangoRoute/", include(("djangoRoute.urls", "djangoRoute"), namespace="djangoRoute")),
+    path("djangoRoute/", include(("djangoRoute.urls", "djangoRoute"), namespace="djangoRoute")),
 
     # Using children route (with namespace)
     # path("djangoModels/", include("djangoModels.urls"))
