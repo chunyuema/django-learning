@@ -7,5 +7,14 @@
 <body>
     <h1>Hello From Django</h1>
     <h2>Main Page</h2>
+
+    {# url routing #}
+    <a href="/djangoRoute/userlist/">Method 1: Use url to enter the user list page</a>
+
+    <br>
+
+    {# 反向解析 #}
+    <a href="{% url 'userlist' %}">Method 2: 反向解析 to enter the user list page</a>
+
 </body>
 </html>
