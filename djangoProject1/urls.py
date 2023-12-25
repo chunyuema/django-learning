@@ -16,10 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from demo1.views import *
+from djangoRoute.views import *
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("demo1/", include("demo1.urls")),
-    path("djangoModels/", include("djangoModels.urls"))
+
+    # 1. Using children route
+    path("djangoRoute/", include("djangoRoute.urls")),
+
+    # 2. Using children route with namespace
+    # path("djangoRoute/", include(("djangoRoute.urls", "djangoRoute"), namespace="djangoRoute")),
+
+    # Using children route (with namespace)
+    # path("djangoModels/", include("djangoModels.urls"))
 ]
