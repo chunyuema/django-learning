@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Template</title>
+</head>
+<body>
+    <h1>Django Template Page</h1>
+    <hr>
+
+    {# single line comment #}
+
+    {% comment %}
+        multiple lines comments
+    {% endcomment %}
+
+    <p>Name: {{ name }}</p>
+    <p>Age: {{ age }}</p>
+    <p>All hobbies: {{ hobbies }}</p>
+    <p>First hobby: {{ hobbies.0 }}</p>
+    <p>Address: {{ address }}</p>
+    <p>City: {{ address.city }}</p>
+    <p>State: {{ address.state }}</p>
+
+</body>
+</html>

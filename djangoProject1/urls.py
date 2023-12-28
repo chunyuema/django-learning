@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from djangoRoute.views import *
+from djangoTemplate.views import *
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -27,6 +28,8 @@ urlpatterns = [
     # 2. Using children route with namespace
     path("djangoRoute/", include(("djangoRoute.urls", "djangoRoute"), namespace="djangoRoute")),
 
+    # The following are for django templates
+    path("index/", djangoTemplateIndex),
     # Using children route (with namespace)
     # path("djangoModels/", include("djangoModels.urls"))
 ]
