@@ -14,6 +14,7 @@
         multiple lines comments
     {% endcomment %}
 
+    <!-- Use of variables -->
     <p>Name: {{ name }}</p>
     <p>Age: {{ age }}</p>
     <p>All hobbies: {{ hobbies }}</p>
@@ -21,6 +22,29 @@
     <p>Address: {{ address }}</p>
     <p>City: {{ address.city }}</p>
     <p>State: {{ address.state }}</p>
+
+
+    <!-- Use of tags -->
+    {% if age < 18 %}
+        <p>{{ name }} is underage</p>
+    {% else %}
+        <p>{{ name }} is NOT underage</p>
+    {% endif %}
+
+
+    {% if age < 18 %}
+        <p>{{ name }} is a baby </p>
+    {% elif age < 45 %}
+        <p>{{ name }} is young adult </p>
+    {% else %}
+        <p>{{ name }} is full adult </p>
+    {% endif %}
+
+    {% if address.city == 'seattle' and address.state == 'WA' %}
+        <p>{{ name }} is in Seattle</p>
+    {% else %}
+        <p>{{ name }} is NOT in Seattle</p>
+    {% endif %}
 
 </body>
 </html>
