@@ -71,6 +71,22 @@
         {% endfor %}
     </table>
 
+    <h4>Use of filters</h4>
+    <p>age = {{ age }}</p>
+    <p>two years later, age = {{ age|add:2}} </p>
+    <p>two years before, age = {{ age|add:-2}} </p>
+
+    <p>name = {{ name }}</p>
+    <p>first char uppercase = {{ name|first|upper }}</p>
+    <p>last char lowercase = {{ name|last|lower }}</p>
+    <p>name.title = {{ name|title }}</p>
+
+    <p>hobbies = {{ hobbies }}</p>
+    <p>{{ hobbies|join:'+' }}</p>
+
+    <p>datetime = {{ datetime }}</p>
+    <p>datetime formatted = {{ datetime|date:'y-m-d' }}</p>
+    <p>datetime formatted = {{ datetime|date:'Y-m-d' }}</p>
 
 </body>
 </html>

@@ -1,3 +1,5 @@
+import datetime
+
 from django.shortcuts import render
 
 # Create your views here.
@@ -9,6 +11,7 @@ def djangoTemplateIndex(request):
         "address": {"city": "seattle", "state": "WA"},
         "foobar": [["1", "2", "3"],
                    ["4", "5", "6"],
-                   ["7", "8", "9"]]
+                   ["7", "8", "9"]],
+        "datetime": datetime.datetime.now()
     }
     return render(request, "index-django-template.html", data)
