@@ -49,8 +49,27 @@
     <p>{{ name }}'s hobbies</p>
     {% for hobby in hobbies %}
         <li>{{ hobby }}</li>
+
+        {% if forloop.first %}
+            <b> -first hobby </b>
+        {% endif %}
+
+        {% if forloop.last %}
+            <b> -last hobby </b>
+        {% endif %}
     {% endfor %}
 
+    <table border="1" width="300">
+        {% for foo in foobar %}
+            <tr>
+                {% for bar in foo %}
+                    <td>
+                        {{ bar }} -- {{forloop.parentloop.counter}} -- {{ forloop.counter }}
+                    </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
 
 
 </body>
